@@ -1,1 +1,1 @@
-web: gunicorn whathappened:app -b 0.0.0.0:$PORT -w 3
+web: gunicorn whathappened:app -b 0.0.0.0:$PORT -w 3 -t 60
