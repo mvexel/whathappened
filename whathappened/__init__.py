@@ -7,7 +7,9 @@ app = Flask(__name__)
 from whathappened.osm import OSMChangeset
 
 def whathappened(identifier, watchfor=[], osmtypes=[]):
-    result = {"node": [], "way": [], "relation": []}
+    result = {}
+    for osmtype in osmtypes:
+        result[osmtype] = []
     c = OSMChangeset.from_server(identifier)
     for osmobj in c.modified:
         if osmobj.osmtype not in osmtypes:
