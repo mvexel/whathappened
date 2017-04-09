@@ -7,7 +7,6 @@ setup(
     install_requires=[
         'flask',
         'requests',
-        'gunicorn==19.7.0',
-        'python==3.6.1'
+        'gunicorn==19.7.0'
     ],
 )
